@@ -47,7 +47,7 @@ On peut aussi forcer l'état par l'adresse : `?phase=avant` ou `?phase=apres`
 
 **Photos intégrées (novembre 2026)** : `src/assets/photos/` (WebP, sans métadonnées GPS). La photo du hero (`musee-etang-jour.webp`) est une photo de l'équipe ; les vues de nuit et la vue de jour retouchée portent la mention discrète « Visuel d'illustration » (champ `mention` dans `images.js`, à retirer si ce sont des photos documentaires). Le champ `position` règle le cadrage quand l'image est recadrée.
 
-Pour les emplacements encore sans photo (intérieur, objets des collections, atelier, convivialité), chaque emplacement affiche une **illustration graphique de démonstration** (SVG aux couleurs de la charte, dans `src/assets/demo/`, générées par `scripts/visuels-demo.py`). Elles portent la mention « Illustration de démo · photo à venir » et leur texte alternatif le précise : ce ne sont pas des photographies du musée.
+Toutes les images du site sont des photos fournies par l'équipe. Pour en ajouter une (intérieur, objets des collections, atelier, convivialité), créez une entrée dans `images.js` et utilisez `<Photo slot="…" />` dans la page.
 Si `src` vaut `null`, un placeholder « Photo à venir » s'affiche à la place.
 Aucune photo trouvée sur Internet n'a été intégrée par nos soins (droits non vérifiables).
 Emplacements : `hero-architecture`, `reouverture-architecture`, `architecture-detail-1/2`, `espace-interieur`,

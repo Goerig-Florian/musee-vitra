@@ -9,7 +9,6 @@ export const piliers = [
     texte: 'Objets, formes, matières et usages : explorez les collections et découvrez comment le design accompagne notre quotidien.',
     cta: 'Explorer les collections',
     lien: '/musee#collections',
-    image: 'experience-decouvrir',
   },
   {
     id: 'participer',
@@ -20,7 +19,6 @@ export const piliers = [
     texte: 'Participez aux ateliers pour débutants, observez, expérimentez et découvrez le design à travers la pratique.',
     cta: 'Découvrir les ateliers',
     lien: '/agenda#atelier',
-    image: 'experience-participer',
   },
   {
     id: 'retrouver',
@@ -31,6 +29,5 @@ export const piliers = [
     texte: 'Profitez des nocturnes, des rencontres culturelles et de l’espace de convivialité pour vivre le musée autrement.',
     cta: 'Voir les prochains rendez-vous',
     lien: '/agenda#rendez-vous',
-    image: 'experience-retrouver',
   },
 ]

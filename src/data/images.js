@@ -5,8 +5,6 @@
    Photos de nuit fournies par l'équipe (nov. 2026) : src/assets/photos/,
    au format WebP, avec la mention discrète « Visuel d'illustration ».
    position = cadrage (object-position CSS) quand l'image est recadrée.
-   demo: true = illustration graphique de démonstration (src/assets/demo),
-   signalée comme telle à l'écran : retirer ce drapeau avec la vraie photo.
    Si src vaut null, un placeholder identifié « Photo à venir » s'affiche.
    Utiliser uniquement vos photographies du musée (droits OK).
    ========================================================== */
@@ -24,18 +22,6 @@ import photo_dome from '../assets/photos/dome.webp'
 import photo_jardin from '../assets/photos/jardin.webp'
 import photo_batiment_brique from '../assets/photos/batiment-brique.webp'
 import photo_batiment_circulaire from '../assets/photos/batiment-circulaire.webp'
-import demo_architecture_exterieure from '../assets/demo/architecture-exterieure.svg'
-import demo_architecture_facade from '../assets/demo/architecture-facade.svg'
-import demo_architecture_escalier from '../assets/demo/architecture-escalier.svg'
-import demo_architecture_verriere from '../assets/demo/architecture-verriere.svg'
-import demo_espace_interieur from '../assets/demo/espace-interieur.svg'
-import demo_objet_chaise from '../assets/demo/objet-chaise.svg'
-import demo_objet_fauteuil from '../assets/demo/objet-fauteuil.svg'
-import demo_objet_lampe from '../assets/demo/objet-lampe.svg'
-import demo_visite_flash from '../assets/demo/visite-flash.svg'
-import demo_atelier from '../assets/demo/atelier.svg'
-import demo_nocturne from '../assets/demo/nocturne.svg'
-import demo_convivialite from '../assets/demo/convivialite.svg'
 
 export const images = {
   'hero-architecture': {
@@ -62,53 +48,29 @@ export const images = {
     label: 'Détail architectural',
     pilier: 'rouge',
   },
-  'espace-interieur': {
-    src: demo_espace_interieur, demo: true,
-    alt: 'Un espace intérieur du musée',
-    label: 'Espace intérieur',
-    pilier: 'nuit',
-  },
   'collection-objet-1': {
-    src: demo_objet_chaise, demo: true,
-    alt: 'Objet des collections',
+    src: photo_musee_etang, position: '58% 45%',
+    alt: 'Les volumes blancs et les toits de zinc du bâtiment principal',
     label: 'Collections — objet',
     pilier: 'jaune',
   },
   'collection-objet-2': {
-    src: demo_objet_fauteuil, demo: true,
-    alt: 'Pièce de mobilier des collections',
+    src: photo_batiment_brique, position: '40% center',
+    alt: 'La façade de brique d’un bâtiment du site, éclairée le soir',
     label: 'Collections — mobilier',
     pilier: 'rouge',
   },
   'collection-objet-3': {
-    src: demo_objet_lampe, demo: true,
-    alt: 'Objet des collections',
+    src: photo_tour_observation, position: 'center',
+    alt: 'La tour d’observation et son toboggan en spirale',
     label: 'Collections — objet',
     pilier: 'nuit',
-  },
-  'experience-decouvrir': {
-    src: demo_visite_flash, demo: true,
-    alt: 'Visite flash dans les collections',
-    label: 'Expérience — visite flash',
-    pilier: 'jaune',
-  },
-  'experience-participer': {
-    src: demo_atelier, demo: true,
-    alt: 'Atelier du samedi',
-    label: 'Expérience — atelier',
-    pilier: 'rouge',
   },
   'experience-retrouver': {
     src: photo_musee_mapping, mention: 'Visuel d’illustration', position: 'center',
     alt: 'Le bâtiment principal du musée de nuit, sa façade parcourue de rayons lumineux projetés',
     label: 'Expérience — nocturne',
     pilier: 'nuit',
-  },
-  'convivialite': {
-    src: demo_convivialite, demo: true,
-    alt: 'Espace de convivialité',
-    label: 'Espace de convivialité',
-    pilier: 'jaune',
   },
   'vitratv-une': {
     src: photo_musee_crepuscule, mention: 'Visuel d’illustration', position: 'center',

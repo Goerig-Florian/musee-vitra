@@ -125,7 +125,6 @@ function Atelier() {
           </div>
         </div>
         <div className="flex flex-col gap-6 lg:col-span-5 lg:col-start-8">
-          <Photo slot="experience-participer" ratio="aspect-[4/3]" />
           <ReservationRequest activite="Atelier du samedi (14 h 30)" dates={dates} max={atelier.capacite} />
         </div>
       </div>
@@ -169,12 +168,13 @@ function Convivialite() {
   return (
     <section id="convivialite" tabIndex={-1} aria-labelledby="t-conv" className="wrap py-20 outline-none sm:py-28">
       <div className="grid gap-10 lg:grid-cols-12">
-        <Reveal className="lg:col-span-5"><Photo slot="convivialite" ratio="aspect-[4/5]" /></Reveal>
-        <Reveal className="lg:col-span-6 lg:col-start-7" delay={100}>
+        <Reveal className="lg:col-span-5">
           <p className="eyebrow">05 · Se retrouver</p>
           <h2 id="t-conv" className="titre-l mt-6">L’espace de convivialité.</h2>
           <p className="lead mt-6">Un lieu pour faire une pause, avant ou après la visite, ou simplement se retrouver.</p>
-          <dl className="mt-8 border-t-2 border-anthracite">
+        </Reveal>
+        <Reveal className="lg:col-span-6 lg:col-start-7" delay={100}>
+          <dl className="border-t-2 border-anthracite">
             {[
               ['Accès', `${convivialite.acces}`],
               ['Consommation', `${convivialite.consommation}. ${convivialite.offre}.`],
