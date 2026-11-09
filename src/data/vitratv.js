@@ -4,6 +4,7 @@
    Pour rendre une vidéo lisible : déposer le fichier dans
    /public/videos/ et renseigner src (et poster si besoin).
    Tant que src vaut null, la vidéo est affichée « à venir ».
+   image = vignette (clé de data/images.js).
    Ne jamais ajouter de compteur de vues ni de captation
    qui n'a pas réellement été tournée.
    ========================================================== */
@@ -25,8 +26,8 @@ export const rubriques = [
     description: 'Revivre les temps forts des soirées du premier et du troisième vendredi, à partir de captations autorisées.',
     couleur: 'nuit',
     videos: [
-      { id: 'noc-1', titre: 'Premier replay de nocturne', src: null },
-      { id: 'noc-2', titre: 'Replay de nocturne', src: null },
+      { id: 'noc-1', titre: 'Premier replay de nocturne', src: null, image: 'tv-vitrahaus-nuit' },
+      { id: 'noc-2', titre: 'Replay de nocturne', src: null, image: 'tv-tour-nuit' },
     ],
   },
   {
@@ -35,8 +36,8 @@ export const rubriques = [
     description: 'Les échanges organisés au musée, pour celles et ceux qui n’ont pas pu y assister.',
     couleur: 'rouge',
     videos: [
-      { id: 'ren-1', titre: 'Rencontre autour des objets du quotidien', src: null, liee: 'rdv-2027-02-05' },
-      { id: 'ren-2', titre: 'Rencontre avec un créateur', src: null, liee: 'rdv-2027-03-05' },
+      { id: 'ren-1', titre: 'Rencontre autour des objets du quotidien', src: null, liee: 'rdv-2027-02-05', image: 'tv-maison-japonaise' },
+      { id: 'ren-2', titre: 'Rencontre avec un créateur', src: null, liee: 'rdv-2027-03-05', image: 'tv-bureau' },
     ],
   },
   {
@@ -45,8 +46,8 @@ export const rubriques = [
     description: 'Un format court consacré à un objet des collections : sa forme, sa matière, son usage.',
     couleur: 'jaune',
     videos: [
-      { id: 'obj-1', titre: 'Épisode à venir', src: null },
-      { id: 'obj-2', titre: 'Épisode à venir', src: null },
+      { id: 'obj-1', titre: 'L’éléphant en bois', src: null, image: 'tv-elephant' },
+      { id: 'obj-2', titre: 'La chaise en porte-à-faux', src: null, image: 'tv-table-panton' },
     ],
   },
   {
@@ -55,8 +56,8 @@ export const rubriques = [
     description: 'L’architecture, les espaces et la vie du musée, filmés au fil des saisons.',
     couleur: 'jaune',
     videos: [
-      { id: 'img-1', titre: 'Le bâtiment', src: null },
-      { id: 'img-2', titre: 'Les coulisses de la réouverture', src: null },
+      { id: 'img-1', titre: 'Le bâtiment', src: null, image: 'tv-facade' },
+      { id: 'img-2', titre: 'L’escalier en spirale', src: null, image: 'tv-escalier' },
     ],
   },
 ]

@@ -57,8 +57,8 @@ export default function Musee() {
           </SectionTitle></Reveal>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {[
-              { slot: 'collection-objet-1', mot: 'Les formes' },
-              { slot: 'collection-objet-2', mot: 'Les matières' },
+              { slot: 'collection-objet-2', mot: 'Les formes' },
+              { slot: 'collection-objet-1', mot: 'Les matières' },
               { slot: 'collection-objet-3', mot: 'Les usages' },
             ].map((o, i) => (
               <Reveal key={o.slot} delay={i * 100} as="figure">

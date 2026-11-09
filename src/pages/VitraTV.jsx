@@ -32,7 +32,9 @@ function CarteVideo({ v, rubrique, i, onPlay }) {
   const dispo = Boolean(v.src)
   const vignette = (
     <div className={`relative aspect-video overflow-hidden ${s.fond}`}>
-      <Shape forme={s.forme} couleur={s.c} className={`absolute ${placements[i % placements.length]} transition-transform duration-700 group-hover:scale-105`} />
+      {v.image
+        ? <Photo slot={v.image} ratio="aspect-video" className="transition-transform duration-700 group-hover:scale-105" />
+        : <Shape forme={s.forme} couleur={s.c} className={`absolute ${placements[i % placements.length]} transition-transform duration-700 group-hover:scale-105`} />}
       <span className="absolute left-3 top-3">{dispo
         ? <span className="inline-flex items-center gap-1.5 bg-jaune px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-anthracite"><Play className="h-3.5 w-3.5" aria-hidden="true" /> Lire</span>
         : <StatutAVenir />}

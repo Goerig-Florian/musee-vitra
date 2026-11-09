@@ -16,13 +16,15 @@ import photo_musee_facade from '../assets/photos/musee-facade.webp'
 import photo_musee_nuit from '../assets/photos/musee-nuit.webp'
 import photo_objet_elephant from '../assets/photos/objet-elephant.webp'
 import photo_roue_chaises from '../assets/photos/roue-chaises.webp'
-import photo_salon_canape from '../assets/photos/salon-canape.webp'
 import photo_salon_collections from '../assets/photos/salon-collections.webp'
 import photo_terrasse from '../assets/photos/terrasse.webp'
 import photo_toboggan_spirale from '../assets/photos/toboggan-spirale.webp'
 import photo_tour_nuit from '../assets/photos/tour-nuit.webp'
 import photo_vitrahaus_jour from '../assets/photos/vitrahaus-jour.webp'
 import photo_vitrahaus_nuit from '../assets/photos/vitrahaus-nuit.webp'
+import photo_salle_manger from '../assets/photos/salle-manger.webp'
+import photo_table_panton from '../assets/photos/table-panton.webp'
+import photo_maison_japonaise from '../assets/photos/maison-japonaise.webp'
 
 export const images = {
   'hero-architecture': {
@@ -80,9 +82,9 @@ export const images = {
     pilier: 'nuit',
   },
   'experience-participer': {
-    src: photo_espace_bureau, position: 'center',
-    alt: 'Un espace de travail avec bureaux, chaises et étagères murales',
-    label: 'Un espace de travail avec bureaux, chaises et étagères murales',
+    src: photo_salle_manger, position: 'center',
+    alt: 'Une grande table ronde entourée de fauteuils, prête pour un atelier',
+    label: 'Une grande table ronde entourée de fauteuils',
     pilier: 'rouge',
   },
   'convivialite': {
@@ -104,9 +106,9 @@ export const images = {
     pilier: 'nuit',
   },
   'vitratv-apercu': {
-    src: photo_salon_canape, position: 'center',
-    alt: 'Un salon d’exposition avec canapé, fauteuil et lampe en papier',
-    label: 'Un salon d’exposition avec canapé, fauteuil et lampe en papier',
+    src: photo_dome_nuit, position: 'center',
+    alt: 'Le dôme géodésique illuminé de nuit',
+    label: 'Le dôme géodésique illuminé de nuit',
     pilier: 'nuit',
   },
   'site-tour': {
@@ -131,6 +133,60 @@ export const images = {
     src: photo_vitrahaus_nuit, position: 'center',
     alt: 'Un bâtiment aux grandes baies vitrées illuminé de nuit',
     label: 'Un bâtiment aux grandes baies vitrées illuminé de nuit',
+    pilier: 'nuit',
+  },
+  'tv-salle-manger': {
+    src: photo_salle_manger, position: 'center',
+    alt: 'Une table ronde blanche entourée de fauteuils coques, sous un luminaire en treillis',
+    label: 'Une table ronde blanche entourée de fauteuils coques, sous un luminaire en treillis',
+    pilier: 'nuit',
+  },
+  'tv-table-panton': {
+    src: photo_table_panton, position: 'center',
+    alt: 'Une longue table entourée de chaises noires en porte-à-faux, dans une galerie vitrée',
+    label: 'Une longue table entourée de chaises noires en porte-à-faux, dans une galerie vitrée',
+    pilier: 'nuit',
+  },
+  'tv-maison-japonaise': {
+    src: photo_maison_japonaise, position: 'center',
+    alt: 'Une pièce de style japonais avec tatamis, table basse et banquette bleue',
+    label: 'Une pièce de style japonais avec tatamis, table basse et banquette bleue',
+    pilier: 'nuit',
+  },
+  'tv-elephant': {
+    src: photo_objet_elephant, position: 'center',
+    alt: 'Un petit éléphant en bois moulé exposé en vitrine',
+    label: 'Un petit éléphant en bois moulé exposé en vitrine',
+    pilier: 'nuit',
+  },
+  'tv-facade': {
+    src: photo_musee_facade, position: 'center',
+    alt: 'La façade blanche et courbe du musée, avec ses toits de zinc',
+    label: 'La façade blanche et courbe du musée, avec ses toits de zinc',
+    pilier: 'nuit',
+  },
+  'tv-escalier': {
+    src: photo_escalier_spirale, position: 'center',
+    alt: 'Un escalier en spirale blanc, vu d’en haut',
+    label: 'Un escalier en spirale blanc, vu d’en haut',
+    pilier: 'nuit',
+  },
+  'tv-tour-nuit': {
+    src: photo_tour_nuit, position: 'center 30%',
+    alt: 'La tour d’observation et son toboggan, éclairés de nuit',
+    label: 'La tour d’observation et son toboggan, éclairés de nuit',
+    pilier: 'nuit',
+  },
+  'tv-vitrahaus-nuit': {
+    src: photo_vitrahaus_nuit, position: 'center',
+    alt: 'Un bâtiment aux grandes baies vitrées illuminé de nuit',
+    label: 'Un bâtiment aux grandes baies vitrées illuminé de nuit',
+    pilier: 'nuit',
+  },
+  'tv-bureau': {
+    src: photo_espace_bureau, position: 'center',
+    alt: 'Un espace de travail avec bureaux, chaises et étagères murales',
+    label: 'Un espace de travail avec bureaux, chaises et étagères murales',
     pilier: 'nuit',
   },
 }
