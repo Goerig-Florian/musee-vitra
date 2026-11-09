@@ -1,123 +1,136 @@
 /* ==========================================================
-   PHOTOGRAPHIES — emplacements à remplacer.
-   1. Déposer le fichier dans /public/photos/ (ex. exterieur.jpg)
-   2. Renseigner src: 'photos/exterieur.jpg' et vérifier l'alt.
-   Photos de nuit fournies par l'équipe (nov. 2026) : src/assets/photos/,
-   au format WebP, avec la mention discrète « Visuel d'illustration ».
+   PHOTOGRAPHIES — photos prises par l'équipe lors de la visite
+   du 16 septembre 2026 (src/assets/photos, WebP sans données GPS).
+   Pour changer une image : déposer le fichier dans src/assets/photos/,
+   l'importer ci-dessous et le renseigner dans src.
    position = cadrage (object-position CSS) quand l'image est recadrée.
-   Si src vaut null, un placeholder identifié « Photo à venir » s'affiche.
-   Utiliser uniquement vos photographies du musée (droits OK).
+   Si src vaut null, un placeholder « Photo à venir » s'affiche.
    ========================================================== */
 
-import photo_musee_crepuscule from '../assets/photos/musee-crepuscule.webp'
-import photo_musee_entree from '../assets/photos/musee-entree.webp'
-import photo_architecture_angle from '../assets/photos/architecture-angle.webp'
-import photo_tour_observation from '../assets/photos/tour-observation.webp'
-import photo_musee_etang from '../assets/photos/musee-etang-jour.webp'
-import photo_musee_jour from '../assets/photos/musee-jour.webp'
+import photo_dome_jour from '../assets/photos/dome-jour.webp'
+import photo_dome_nuit from '../assets/photos/dome-nuit.webp'
+import photo_escalier_spirale from '../assets/photos/escalier-spirale.webp'
+import photo_espace_bureau from '../assets/photos/espace-bureau.webp'
+import photo_musee_etang from '../assets/photos/musee-etang.webp'
+import photo_musee_facade from '../assets/photos/musee-facade.webp'
 import photo_musee_nuit from '../assets/photos/musee-nuit.webp'
-import photo_musee_mapping from '../assets/photos/musee-mapping.webp'
-import photo_musee_bord_eau from '../assets/photos/musee-bord-eau.webp'
-import photo_dome from '../assets/photos/dome.webp'
-import photo_jardin from '../assets/photos/jardin.webp'
-import photo_batiment_brique from '../assets/photos/batiment-brique.webp'
-import photo_batiment_circulaire from '../assets/photos/batiment-circulaire.webp'
+import photo_objet_elephant from '../assets/photos/objet-elephant.webp'
+import photo_roue_chaises from '../assets/photos/roue-chaises.webp'
+import photo_salon_canape from '../assets/photos/salon-canape.webp'
+import photo_salon_collections from '../assets/photos/salon-collections.webp'
+import photo_terrasse from '../assets/photos/terrasse.webp'
+import photo_toboggan_spirale from '../assets/photos/toboggan-spirale.webp'
+import photo_tour_nuit from '../assets/photos/tour-nuit.webp'
+import photo_vitrahaus_jour from '../assets/photos/vitrahaus-jour.webp'
+import photo_vitrahaus_nuit from '../assets/photos/vitrahaus-nuit.webp'
 
 export const images = {
   'hero-architecture': {
-    src: photo_musee_etang, position: '56% center', /* photo de l'équipe, visite de septembre 2026 */
-    alt: 'Le bâtiment principal du musée, aux volumes blancs sculptés, vu depuis l’étang sous un ciel nuageux',
-    label: 'Architecture extérieure — vue d’ensemble',
+    src: photo_musee_etang, position: '56% center',
+    alt: 'Le bâtiment principal du musée, aux volumes blancs sculptés, vu depuis l’étang',
+    label: 'Le bâtiment principal du musée, aux volumes blancs sculptés, vu depuis l’étang',
     pilier: 'jaune',
   },
   'reouverture-architecture': {
-    src: photo_musee_entree, mention: 'Visuel d’illustration', position: 'center',
-    alt: 'L’entrée du musée éclairée de nuit, avec son escalier et son auvent',
-    label: 'Architecture — détail de façade',
-    pilier: 'nuit',
-  },
-  'architecture-detail-1': {
-    src: photo_architecture_angle, mention: 'Visuel d’illustration', position: '30% center',
-    alt: 'Un bâtiment aux murs de béton et au toit en pointe, éclairé de nuit',
-    label: 'Détail architectural',
-    pilier: 'jaune',
-  },
-  'architecture-detail-2': {
-    src: photo_tour_observation, mention: 'Visuel d’illustration', position: 'center',
-    alt: 'Une tour d’observation métallique avec son toboggan en spirale, de nuit',
-    label: 'Détail architectural',
-    pilier: 'rouge',
-  },
-  'collection-objet-1': {
-    src: photo_musee_etang, position: '58% 45%',
-    alt: 'Les volumes blancs et les toits de zinc du bâtiment principal',
-    label: 'Collections — objet',
-    pilier: 'jaune',
-  },
-  'collection-objet-2': {
-    src: photo_batiment_brique, position: '40% center',
-    alt: 'La façade de brique d’un bâtiment du site, éclairée le soir',
-    label: 'Collections — mobilier',
-    pilier: 'rouge',
-  },
-  'collection-objet-3': {
-    src: photo_tour_observation, position: 'center',
-    alt: 'La tour d’observation et son toboggan en spirale',
-    label: 'Collections — objet',
-    pilier: 'nuit',
-  },
-  'experience-retrouver': {
-    src: photo_musee_mapping, mention: 'Visuel d’illustration', position: 'center',
-    alt: 'Le bâtiment principal du musée de nuit, sa façade parcourue de rayons lumineux projetés',
-    label: 'Expérience — nocturne',
-    pilier: 'nuit',
-  },
-  'vitratv-une': {
-    src: photo_musee_crepuscule, mention: 'Visuel d’illustration', position: 'center',
-    alt: 'Le bâtiment principal du musée illuminé au crépuscule',
-    label: 'Vitra TV — à la une',
-    pilier: 'nuit',
-  },
-  'vitratv-apercu': {
-    src: photo_musee_nuit, mention: 'Visuel d’illustration', position: 'center',
-    alt: 'Le bâtiment principal du musée éclairé de nuit',
-    label: 'Vitra TV — aperçu',
-    pilier: 'nuit',
-  },
-  'site-dome': {
-    src: photo_dome, mention: 'Visuel d’illustration', position: '45% center',
-    alt: 'Un dôme géodésique éclairé parmi les arbres, de nuit',
-    label: 'Le site — dôme',
-    pilier: 'nuit',
-  },
-  'site-jardin': {
-    src: photo_jardin, mention: 'Visuel d’illustration', position: 'center',
-    alt: 'Un jardin aux allées éclairées, avec un dôme en arrière-plan',
-    label: 'Le site — jardin',
-    pilier: 'jaune',
-  },
-  'site-brique': {
-    src: photo_batiment_brique, mention: 'Visuel d’illustration', position: 'center',
-    alt: 'Un long bâtiment de brique éclairé, un cycliste passe devant',
-    label: 'Le site — bâtiment de brique',
-    pilier: 'rouge',
-  },
-  'site-bord-eau': {
-    src: photo_musee_bord_eau, mention: 'Visuel d’illustration', position: 'center',
-    alt: 'Le musée illuminé, reflété dans un bassin la nuit',
-    label: 'Le site — bassin',
-    pilier: 'nuit',
-  },
-  'site-circulaire': {
-    src: photo_batiment_circulaire, mention: 'Visuel d’illustration', position: 'center',
-    alt: 'Un bâtiment circulaire au bardage blanc, éclairé de nuit',
-    label: 'Le site — bâtiment circulaire',
+    src: photo_musee_facade, position: 'center',
+    alt: 'La façade blanche et courbe du musée, avec ses toits de zinc',
+    label: 'La façade blanche et courbe du musée, avec ses toits de zinc',
     pilier: 'nuit',
   },
   'musee-jour': {
-    src: photo_musee_jour, mention: 'Visuel d’illustration', position: '40% center',
-    alt: 'Le bâtiment principal du musée, aux volumes blancs sculptés, sous un ciel clair',
-    label: 'Architecture — vue de jour',
+    src: photo_vitrahaus_jour, position: 'center',
+    alt: 'Un bâtiment aux volumes de maisons empilées et aux grandes baies vitrées',
+    label: 'Un bâtiment aux volumes de maisons empilées et aux grandes baies vitrées',
     pilier: 'jaune',
+  },
+  'architecture-detail-1': {
+    src: photo_escalier_spirale, position: 'center',
+    alt: 'Un escalier en spirale blanc, vu d’en haut',
+    label: 'Un escalier en spirale blanc, vu d’en haut',
+    pilier: 'jaune',
+  },
+  'architecture-detail-2': {
+    src: photo_toboggan_spirale, position: 'center',
+    alt: 'Le toboggan en spirale de la tour, vu d’en dessous',
+    label: 'Le toboggan en spirale de la tour, vu d’en dessous',
+    pilier: 'rouge',
+  },
+  'site-dome': {
+    src: photo_dome_jour, position: '40% center',
+    alt: 'Un dôme géodésique blanc dans une prairie',
+    label: 'Un dôme géodésique blanc dans une prairie',
+    pilier: 'nuit',
+  },
+  'collection-objet-1': {
+    src: photo_objet_elephant, position: 'center',
+    alt: 'Un petit éléphant en bois moulé exposé en vitrine',
+    label: 'Un petit éléphant en bois moulé exposé en vitrine',
+    pilier: 'jaune',
+  },
+  'collection-objet-2': {
+    src: photo_roue_chaises, position: 'center',
+    alt: 'Des dizaines de chaises colorées disposées en roue devant une baie vitrée',
+    label: 'Des dizaines de chaises colorées disposées en roue devant une baie vitrée',
+    pilier: 'rouge',
+  },
+  'collection-objet-3': {
+    src: photo_salon_collections, position: 'center',
+    alt: 'Un salon meublé de canapés jaunes, de fauteuils et d’un tapis coloré',
+    label: 'Un salon meublé de canapés jaunes, de fauteuils et d’un tapis coloré',
+    pilier: 'nuit',
+  },
+  'experience-participer': {
+    src: photo_espace_bureau, position: 'center',
+    alt: 'Un espace de travail avec bureaux, chaises et étagères murales',
+    label: 'Un espace de travail avec bureaux, chaises et étagères murales',
+    pilier: 'rouge',
+  },
+  'convivialite': {
+    src: photo_terrasse, position: 'center',
+    alt: 'Une terrasse en contrebas avec tables et chaises, entre murs de béton et baies vitrées',
+    label: 'Une terrasse en contrebas avec tables et chaises, entre murs de béton et baies vitrées',
+    pilier: 'jaune',
+  },
+  'experience-retrouver': {
+    src: photo_vitrahaus_nuit, position: 'center',
+    alt: 'Un bâtiment aux grandes baies vitrées illuminé de nuit',
+    label: 'Un bâtiment aux grandes baies vitrées illuminé de nuit',
+    pilier: 'nuit',
+  },
+  'vitratv-une': {
+    src: photo_musee_nuit, position: 'center',
+    alt: 'Le musée illuminé, reflété dans l’étang la nuit',
+    label: 'Le musée illuminé, reflété dans l’étang la nuit',
+    pilier: 'nuit',
+  },
+  'vitratv-apercu': {
+    src: photo_salon_canape, position: 'center',
+    alt: 'Un salon d’exposition avec canapé, fauteuil et lampe en papier',
+    label: 'Un salon d’exposition avec canapé, fauteuil et lampe en papier',
+    pilier: 'nuit',
+  },
+  'site-tour': {
+    src: photo_tour_nuit, position: 'center',
+    alt: 'La tour d’observation et son toboggan, éclairés de nuit',
+    label: 'La tour d’observation et son toboggan, éclairés de nuit',
+    pilier: 'nuit',
+  },
+  'site-dome-nuit': {
+    src: photo_dome_nuit, position: 'center',
+    alt: 'Le dôme géodésique illuminé de nuit',
+    label: 'Le dôme géodésique illuminé de nuit',
+    pilier: 'nuit',
+  },
+  'site-musee-nuit': {
+    src: photo_musee_nuit, position: 'center',
+    alt: 'Le musée illuminé, reflété dans l’étang la nuit',
+    label: 'Le musée illuminé, reflété dans l’étang la nuit',
+    pilier: 'nuit',
+  },
+  'site-vitrahaus-nuit': {
+    src: photo_vitrahaus_nuit, position: 'center',
+    alt: 'Un bâtiment aux grandes baies vitrées illuminé de nuit',
+    label: 'Un bâtiment aux grandes baies vitrées illuminé de nuit',
+    pilier: 'nuit',
   },
 }

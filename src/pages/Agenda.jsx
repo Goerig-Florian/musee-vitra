@@ -125,6 +125,7 @@ function Atelier() {
           </div>
         </div>
         <div className="flex flex-col gap-6 lg:col-span-5 lg:col-start-8">
+          <Photo slot="experience-participer" ratio="aspect-[4/3]" />
           <ReservationRequest activite="Atelier du samedi (14 h 30)" dates={dates} max={atelier.capacite} />
         </div>
       </div>
@@ -153,7 +154,7 @@ function Nocturnes() {
           ))}
         </div>
         <ul className="mt-14 grid grid-cols-2 gap-4 lg:grid-cols-4" aria-label="Le site à la nuit tombée">
-          {['site-jardin', 'site-bord-eau', 'site-brique', 'site-circulaire'].map((slot) => (
+          {['site-tour', 'site-dome-nuit', 'site-musee-nuit', 'site-vitrahaus-nuit'].map((slot) => (
             <li key={slot}><Photo slot={slot} ratio="aspect-[4/3]" sombre /></li>
           ))}
         </ul>
@@ -172,6 +173,7 @@ function Convivialite() {
           <p className="eyebrow">05 · Se retrouver</p>
           <h2 id="t-conv" className="titre-l mt-6">L’espace de convivialité.</h2>
           <p className="lead mt-6">Un lieu pour faire une pause, avant ou après la visite, ou simplement se retrouver.</p>
+          <Photo slot="convivialite" ratio="aspect-[4/3]" className="mt-8" />
         </Reveal>
         <Reveal className="lg:col-span-6 lg:col-start-7" delay={100}>
           <dl className="border-t-2 border-anthracite">

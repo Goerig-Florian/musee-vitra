@@ -45,7 +45,7 @@ On peut aussi forcer l'état par l'adresse : `?phase=avant` ou `?phase=apres`
 
 3. Supprimer `demo: true` sur cet emplacement.
 
-**Photos intégrées (novembre 2026)** : `src/assets/photos/` (WebP, sans métadonnées GPS). La photo du hero (`musee-etang-jour.webp`) est une photo de l'équipe ; les vues de nuit et la vue de jour retouchée portent la mention discrète « Visuel d'illustration » (champ `mention` dans `images.js`, à retirer si ce sont des photos documentaires). Le champ `position` règle le cadrage quand l'image est recadrée.
+**Photos** : toutes les images sont des photos prises par l'équipe lors de la visite du 16 septembre 2026 (`src/assets/photos/`, WebP sans données GPS). Le champ `position` règle le cadrage quand l'image est recadrée.
 
 Toutes les images du site sont des photos fournies par l'équipe. Pour en ajouter une (intérieur, objets des collections, atelier, convivialité), créez une entrée dans `images.js` et utilisez `<Photo slot="…" />` dans la page.
 Si `src` vaut `null`, un placeholder « Photo à venir » s'affiche à la place.
