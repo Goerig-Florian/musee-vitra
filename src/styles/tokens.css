@@ -1,0 +1,17 @@
+/* ==========================================================
+   Charte graphique validée — source unique des couleurs.
+   Valeurs au format "R G B" pour permettre l'opacité Tailwind.
+   ========================================================== */
+:root {
+  /* Piliers */
+  --c-jaune: 253 209 12;      /* #FDD10C  Découvrir     */
+  --c-rouge: 234 70 58;       /* #EA463A  Participer    */
+  --c-nuit: 30 43 69;         /* #1E2B45  Se retrouver  */
+  /* Neutres */
+  --c-creme: 247 244 236;     /* #F7F4EC  Fond principal          */
+  --c-anthracite: 32 37 42;   /* #20252A  Texte principal         */
+  --c-gris: 217 214 207;      /* #D9D6CF  Séparations, fonds sec. */
+
+  --header-h: 4.5rem;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}

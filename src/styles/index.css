@@ -1,0 +1,56 @@
+@import './tokens.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 4rem); -webkit-text-size-adjust: 100%; }
+  body { @apply bg-creme text-anthracite font-sans antialiased; font-feature-settings: "ss01", "cv11"; }
+  h1, h2, h3, h4 { @apply font-display; text-wrap: balance; }
+  p { text-wrap: pretty; }
+  ::selection { @apply bg-jaune text-anthracite; }
+
+  /* Focus visible très lisible, adapté aux fonds clairs et sombres */
+  :focus-visible { outline: 3px solid rgb(var(--c-anthracite)); outline-offset: 3px; }
+  .on-dark :focus-visible { outline-color: rgb(var(--c-jaune)); }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-10; }
+  .eyebrow { @apply font-sans text-xs font-semibold uppercase tracking-[0.18em]; }
+  .titre-xl { @apply font-display font-extrabold leading-[0.88] tracking-titre; font-size: clamp(3rem, 9vw, 8.5rem); }
+  .titre-l { @apply font-display font-extrabold leading-[0.95] tracking-titre; font-size: clamp(2.25rem, 5.5vw, 4.75rem); }
+  .titre-m { @apply font-display font-bold leading-none tracking-titre; font-size: clamp(1.75rem, 3.2vw, 2.75rem); }
+  .lead { @apply text-lg leading-relaxed sm:text-xl; }
+  .rule { @apply border-t border-anthracite; }
+
+  .btn { @apply inline-flex min-h-[48px] items-center gap-3 px-5 py-3 font-display text-base font-bold leading-none transition-colors duration-200; }
+  .btn svg { transition: transform .25s var(--ease); }
+  .btn:hover svg { transform: translateX(4px); }
+  .btn-dark { @apply bg-anthracite text-creme hover:bg-nuit; }
+  .btn-light { @apply border-2 border-anthracite text-anthracite hover:bg-anthracite hover:text-creme; }
+  .btn-jaune { @apply bg-jaune text-anthracite hover:bg-creme; }
+  .btn-creme { @apply bg-creme text-anthracite hover:bg-jaune; }
+  .btn-outline-creme { @apply border-2 border-creme text-creme hover:bg-creme hover:text-nuit; }
+
+  .lien { @apply font-semibold underline decoration-2 underline-offset-4 transition-colors hover:decoration-rouge; }
+
+  .tag { @apply inline-flex items-center gap-2 border border-current px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.12em]; }
+}
+
+/* Apparition progressive des sections */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* Petits mouvements des formes géométriques */
+@keyframes flotte { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-8px) } }
+@keyframes tourne { to { transform: rotate(360deg) } }
+.anim-flotte { animation: flotte 6s ease-in-out infinite; }
+.anim-tourne { animation: tourne 40s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .anim-flotte, .anim-tourne { animation: none; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
