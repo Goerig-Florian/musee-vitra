@@ -1,5 +1,5 @@
 /* ==========================================================
-   VITRA TV — maquette de démonstration.
+   VITRA TV — projet proposé à la municipalité (non lancé).
    Projet proposé à la municipalité : non adopté à ce jour.
    Pour rendre une vidéo lisible : déposer le fichier dans
    /public/videos/ et renseigner src (et poster si besoin).

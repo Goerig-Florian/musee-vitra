@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Play, MonitorPlay } from 'lucide-react'
+import { ArrowRight, MonitorPlay } from 'lucide-react'
 import { usePhase } from '../context/Phase'
 import usePageTitle from '../components/usePageTitle'
 import Photo from '../components/Photo'
@@ -221,11 +221,11 @@ function VitraTvApercu() {
       <Reveal><SectionTitle num="06" rubrique="Vitra TV · projet" titre="Vitra TV — Le musée en images." id="titre-tv" /></Reveal>
       <div className="mt-12 grid gap-10 lg:grid-cols-12">
         <Reveal className="lg:col-span-7">
-          <Link to="/vitra-tv" className="group block bg-nuit p-3 sm:p-4" aria-label="Voir la maquette Vitra TV">
+          <Link to="/vitra-tv" className="group block bg-nuit p-3 sm:p-4" aria-label="Découvrir Vitra TV">
             <div className="relative">
               <Photo slot="vitratv-apercu" ratio="aspect-video" sombre />
               <span className="absolute bottom-4 left-4 inline-flex items-center gap-2 bg-jaune px-3 py-2 text-xs font-bold uppercase tracking-[0.12em] text-anthracite">
-                <Play className="h-3.5 w-3.5" aria-hidden="true" /> Démonstration
+                Bientôt
               </span>
             </div>
             <div className="flex items-center justify-between px-1 pt-3 text-creme">
@@ -237,9 +237,9 @@ function VitraTvApercu() {
         <Reveal className="flex flex-col lg:col-span-4 lg:col-start-9" delay={120}>
           <p className="lead">Découvrez les coulisses du musée, les rencontres autour du design et les temps forts de sa programmation.</p>
           <p className="mt-6 border-l-4 border-jaune pl-4 text-[15px] leading-relaxed">
-            <strong>Projet proposé à la municipalité.</strong> Vitra TV n’est pas encore en service : la page présente une maquette de son fonctionnement.
+            <strong>Un projet en préparation.</strong> Vitra TV est proposée à la municipalité ; les premières vidéos seront annoncées ici.
           </p>
-          <Link to="/vitra-tv" className="btn btn-dark mt-8 self-start"><MonitorPlay className="h-5 w-5" aria-hidden="true" /> Voir la maquette Vitra TV</Link>
+          <Link to="/vitra-tv" className="btn btn-dark mt-8 self-start"><MonitorPlay className="h-5 w-5" aria-hidden="true" /> Découvrir Vitra TV</Link>
         </Reveal>
       </div>
     </section>

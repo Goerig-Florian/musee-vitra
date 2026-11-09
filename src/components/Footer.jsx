@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
 import { musee, horaires } from '../data/musee'
 import { useNavItems } from './Header'
+import { usePhase } from '../context/Phase'
 import Logo from './Logo'
 
 export default function Footer() {
   const items = useNavItems()
+  const { phase, setPhase } = usePhase()
   return (
     <footer className="on-dark relative overflow-hidden bg-nuit text-creme">
       <div className="h-3 bg-jaune" aria-hidden="true" />
@@ -42,9 +44,15 @@ export default function Footer() {
           </ul>
         </nav>
         <p className="text-xs leading-relaxed text-creme/80 md:col-span-12">
-          Prototype réalisé dans le cadre d’un projet de communication publique (BUT MMI 3). La ville de Valmont-sur-Rive,
-          l’adresse, les courriels et les conditions de réouverture sont fictifs. Ce site n’est pas celui du Vitra Design Museum.
+          Projet de communication publique, BUT MMI 3. Valmont-sur-Rive, l’adresse et les courriels sont fictifs ; ce site n’est pas celui du Vitra Design Museum.
         </p>
+        <div role="group" aria-label="Version du site" className="-mt-10 flex items-center gap-2 text-xs text-creme/80 md:col-span-12">
+          <span>Version :</span>
+          {[['avant', 'avant la réouverture'], ['apres', 'après la réouverture']].map(([v, l]) => (
+            <button key={v} type="button" aria-pressed={phase === v} onClick={() => setPhase(v)}
+              className={`px-1.5 py-1 underline-offset-4 ${phase === v ? 'font-semibold text-creme underline' : 'hover:text-creme hover:underline'}`}>{l}</button>
+          ))}
+        </div>
       </div>
     </footer>
   )

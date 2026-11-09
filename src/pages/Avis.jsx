@@ -25,11 +25,11 @@ function lireStock() { try { return JSON.parse(localStorage.getItem(CLE)) || [] 
 
 function NoteProto() {
   return (
-    <aside aria-label="Fonctionnement du prototype" className="flex gap-4 border-2 border-anthracite bg-creme p-5">
+    <aside aria-label="Confidentialité" className="flex gap-4 border-2 border-anthracite bg-creme p-5">
       <ShieldCheck className="h-7 w-7 shrink-0" aria-hidden="true" />
       <div className="text-[15px] leading-relaxed">
-        <p className="font-semibold">Questionnaire anonyme — version de démonstration.</p>
-        <p className="mt-1">Aucune donnée personnelle n’est demandée. Dans ce prototype, <strong>les réponses ne sont pas transmises à la municipalité</strong> : aucun serveur n’est connecté. Elles sont seulement conservées dans votre navigateur, et vous pouvez les effacer à tout moment.</p>
+        <p className="font-semibold">Questionnaire anonyme.</p>
+        <p className="mt-1">Aucune donnée personnelle n’est demandée. Vos réponses sont conservées sur cet appareil uniquement : elles ne sont pas transmises à la municipalité. Vous pouvez les effacer à tout moment.</p>
       </div>
     </aside>
   )
@@ -37,7 +37,7 @@ function NoteProto() {
 
 export default function Avis() {
   usePageTitle('Votre avis')
-  const { avant, setPhase } = usePhase()
+  const { avant } = usePhase()
   const [rep, setRep] = useState(VIDE)
   const [erreurs, setErreurs] = useState({})
   const [envoye, setEnvoye] = useState(false)
@@ -53,7 +53,6 @@ export default function Avis() {
           intro={`Le questionnaire de premières impressions ouvrira avec la réouverture du musée, le ${reouverture.court}, et restera accessible jusqu’au ${questionnaire.fin}.`} />
         <div className="wrap flex flex-wrap gap-3 py-16">
           <Link to="/infos" className="btn btn-dark">Préparer ma visite <ArrowRight className="h-5 w-5" aria-hidden="true" /></Link>
-          <button type="button" onClick={() => setPhase('apres')} className="btn btn-light">Démo : voir la version après réouverture</button>
         </div>
       </>
     )
@@ -102,10 +101,10 @@ export default function Avis() {
                 <h2 id="t-merci" className="titre-m">Merci pour votre participation.</h2>
                 <p className="mt-4 text-lg">
                   {rep.visite === 'Oui'
-                    ? 'Vos réponses ont été enregistrées dans ce navigateur, pour la démonstration.'
-                    : 'Votre réponse a été enregistrée dans ce navigateur, pour la démonstration.'}
+                    ? 'Vos réponses ont été enregistrées sur cet appareil.'
+                    : 'Votre réponse a été enregistrée sur cet appareil.'}
                 </p>
-                <p className="mt-2 font-semibold">Prototype : elles n’ont pas été envoyées à la municipalité.</p>
+                <p className="mt-2">Elles ne sont pas transmises à la municipalité.</p>
               </div>
               <h3 className="mt-10 font-display text-2xl font-bold">Récapitulatif</h3>
               <dl className="mt-4 border-t-2 border-anthracite">
@@ -115,10 +114,10 @@ export default function Avis() {
                 ))}
                 {rep.visite === 'Oui' && rep.ameliorer && <div className="border-b border-anthracite py-3"><dt className="font-semibold">Que pourrions-nous améliorer ?</dt><dd className="mt-1 whitespace-pre-line">{rep.ameliorer}</dd></div>}
               </dl>
-              <p className="mt-6 text-sm">Réponses conservées dans ce navigateur : <strong>{stock.length}</strong>.</p>
+              <p className="mt-6 text-sm">Réponses conservées sur cet appareil : <strong>{stock.length}</strong>.</p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <button type="button" onClick={recommencer} className="btn btn-dark"><RotateCcw className="h-5 w-5" aria-hidden="true" /> Nouvelle réponse</button>
-                <button type="button" onClick={effacer} className="btn btn-light" disabled={!stock.length}><Trash2 className="h-5 w-5" aria-hidden="true" /> Effacer les réponses de ce navigateur</button>
+                <button type="button" onClick={effacer} className="btn btn-light" disabled={!stock.length}><Trash2 className="h-5 w-5" aria-hidden="true" /> Effacer mes réponses</button>
               </div>
             </section>
           ) : (
@@ -163,8 +162,8 @@ export default function Avis() {
 
               {rep.visite !== 'Non' && (
                 <div className="border-t-2 border-anthracite pt-6">
-                  <button type="submit" className="btn btn-dark">Enregistrer mes réponses (démo) <ArrowRight className="h-5 w-5" aria-hidden="true" /></button>
-                  <p className="mt-3 text-sm">Les réponses restent dans ce navigateur et ne sont envoyées à personne.</p>
+                  <button type="submit" className="btn btn-dark">Valider mes réponses <ArrowRight className="h-5 w-5" aria-hidden="true" /></button>
+                  <p className="mt-3 text-sm">Les réponses restent sur cet appareil et ne sont transmises à personne.</p>
                 </div>
               )}
             </form>

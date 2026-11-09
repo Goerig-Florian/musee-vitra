@@ -71,7 +71,7 @@ export default function VitraTV() {
       <div className="bg-jaune text-anthracite">
         <p className="wrap flex items-start gap-2 py-3 text-sm font-medium sm:items-center">
           <Info className="mt-0.5 h-4 w-4 shrink-0 sm:mt-0" aria-hidden="true" />
-          <span><strong>Maquette de démonstration.</strong> Vitra TV est un projet proposé à la municipalité de Valmont-sur-Rive : ce service n’est pas encore en ligne et aucune vidéo n’est publiée à ce jour.</span>
+          <span><strong>Vitra TV est en préparation.</strong> Ce projet est proposé à la municipalité de Valmont-sur-Rive ; aucune vidéo n’est encore publiée.</span>
         </p>
       </div>
 

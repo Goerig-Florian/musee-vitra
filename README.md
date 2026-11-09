@@ -16,15 +16,15 @@ npm run build:autonome   # dist-autonome/musee-vitra.html : un seul fichier, s'o
 
 Pour une présentation sans installation : ouvrir `dist-autonome/musee-vitra.html` dans Chrome, Firefox, Edge ou Safari.
 
-## Mode de démonstration (avant / après réouverture)
+## Deux versions (avant / après réouverture)
 
-La barre noire en haut du site bascule entre :
+Le sélecteur « Version » en pied de page bascule entre :
 
 - **Avant réouverture** : campagne annonçant le 2 février 2027 (compte à rebours, questionnaire fermé).
 - **Après réouverture** : rubrique « Votre avis » dans le menu, appel au questionnaire sur l'accueil, questionnaire actif.
 
 On peut aussi forcer l'état par l'adresse : `?phase=avant` ou `?phase=apres`
-(ex. `http://localhost:5173/?phase=apres#/avis`). Valeur par défaut et affichage de la barre : `src/config.js`.
+(ex. `http://localhost:5173/?phase=apres#/avis`). Valeur par défaut et barre de démonstration en haut de page (masquée, `AFFICHER_BARRE_DEMO`) : `src/config.js`.
 
 ## Où modifier quoi
 

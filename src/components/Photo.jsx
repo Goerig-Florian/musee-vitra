@@ -15,21 +15,11 @@ export default function Photo({ slot, className = '', ratio = 'aspect-[4/3]', so
       <figure className={`${ratio} relative overflow-hidden bg-gris ${className}`}>
         <img
           src={img.src}
-          alt={img.demo ? `Illustration de démonstration : ${img.alt.charAt(0).toLowerCase()}${img.alt.slice(1)}` : img.alt}
+          alt={img.demo ? `Illustration : ${img.alt.charAt(0).toLowerCase()}${img.alt.slice(1)}` : img.alt}
           loading={priority ? 'eager' : 'lazy'}
           className="absolute inset-0 h-full w-full object-cover"
           style={img.position ? { objectPosition: img.position } : undefined}
         />
-        {img.mention && (
-          <figcaption className="absolute bottom-0 right-0 bg-anthracite/70 px-2 py-0.5 text-[10px] font-medium text-creme" aria-hidden="true">
-            {img.mention}
-          </figcaption>
-        )}
-        {img.demo && (
-          <figcaption className="absolute left-0 top-0 bg-anthracite px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-creme" aria-hidden="true">
-            Illustration de démo · photo à venir
-          </figcaption>
-        )}
       </figure>
     )
   }
